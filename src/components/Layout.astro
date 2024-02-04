@@ -1,0 +1,34 @@
+---
+interface Props {
+
+    pageTitle?: string;
+    pageDescription?:string;
+}
+
+
+const {pageTitle="Hoa", pageDescription="La descripcion"} = Astro.props
+
+
+---
+
+
+<!nterfYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content={pageDescription}>
+    <title>{pageTitle}</title>
+
+</head>
+<body>
+    
+    <slot/>
+</body>
+</html>
+
+
+<style>
+    body {
+        background-color: #202020;
+        color: #fff;
+    }

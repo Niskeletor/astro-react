@@ -1,0 +1,33 @@
+---
+interface Props {
+    title : string
+    content: string
+
+}
+
+const {title="titulo",content="contenido" } = Astro.props
+
+console.log(title)
+---
+
+
+
+<style>
+.card{
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+}
+    </style>
+
+<div class="card">
+    <h1>{title}</h1>
+    <p>{content}</p>
+    
+</div>
+
+

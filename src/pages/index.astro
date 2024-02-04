@@ -1,0 +1,26 @@
+---
+console.log("Hola Mundo");
+
+import Layout from '../components/Layout.astro'
+import Button from '../components/ButtonSubscribe'
+import { ToastContainer} from 'react-toastify';
+const isActive = false;
+
+---
+
+
+<Layout >
+
+
+<div/>
+	<h1>Proyecto Astro</h1>
+	<p>Pagina de Inicio Ñ</p>
+</div>
+
+<Button client:load/>
+<ToastContainer client:load/>
+
+
+
+</Layout>
+

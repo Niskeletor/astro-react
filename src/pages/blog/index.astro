@@ -1,0 +1,40 @@
+---
+import Layout from '../../components/Layout.astro'
+
+const posts = await Astro.glob('./posts/*.md')
+console.log(posts.map (post => post.url))
+
+---
+
+<Layout pageTitle="Blooogs">
+
+    <h1>Blog</h1>
+
+    <img src="https://lastfm.freetls.fastly.net/i/u/270x205/bc6ac0a18f244f5dbb993da575f06de3.jpg" alt="">
+
+    <br />
+    <ul>
+     
+    
+    { posts.map (post => {
+
+        return (
+        <li class="link"> <a href={post.url}>{post.frontmatter.title}</a> </li>          
+            )
+            
+    })  }
+
+</ul>
+
+<style>
+    .link {
+        background: wheat;
+        color : black;
+        text-decoration: none;
+        display: block;
+
+    }
+
+    </style>
+
+</Layout>
